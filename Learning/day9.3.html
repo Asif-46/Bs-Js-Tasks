@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*const p =new Promise((resolve,reject)=>{
+            resolve("issue resolved")
+        })
+        p.then((msg)=>console.log(msg))
+
+        const p = new Promise((resolve,reject)=>{
+            resolve("something gone wrong")
+        })
+        p.catch((err)=>console.log(error))
+
+        const p = new Promise((res,rej)=>{
+            res("completed")
+            rej("not completed")
+        })
+        p.then((msg)=>console.log(msg))
+        p.catch((err)=>console.log(error))
+
+
+        const p = new Promise((res,rej){
+            res("issue is resolved!")
+
+        })
+        p.then((msg)=>{
+            return "successfully"+msg
+        })
+        .then((msg)=>console.log(msg))
+
+
+        const p = new Promise((res,rej){
+            res("issue is resolved!")
+
+        })
+        p.then((msg)=>{
+            return "successfully"+msg
+        })
+        .then((msg) => new Promise((res,rej)=>{
+            rej("new prblm has arised")
+
+        }))
+        .then((msg)=>console.log(msg))
+        .catch((err)=>console.log(err))*/
+
+        /*fetch("https://jsonplaceholder.typicode.com/")
+        .then((res)=>{
+            return res.json;
+        })
+        .then((res)=>console.log(res))
+        .catch((err)=>console.log("error:"+err))*/
+
+
+        function f1(){
+            return
+        }
+        console.log(f1())
+
+
+        async function f1(){
+            return {}
+        }
+        f1().then((res)=>console.log(res))
+
+        async function f1(){
+            const rec = await fetch("https://jsonplaceholder.typicode.com/users");
+            const data=rec.json();
+            console.log(data);
+
+        }
+        f1();
+
+
+            
+
+
+    </script>
+</body>
+</html>

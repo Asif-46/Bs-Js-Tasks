@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h2>Java Script in the Internal way</h2>
+    <p id="demo">JavaScript can modify the text.</p>
+    <button type="button" onclick="document.getElementById('demo').innerHTML='hello JavaScript'">click</button>
+
+    <h2>Java Script in the External way</h2>
+    <p id="demo1">JavaScript can modify the text.</p>
+    <button type="button" onclick="External()">click!</button>
+    <script src="./new.js"></script>
+
+
+    <!-- Display Methods - 4 meth -->
+    <h2> using innerHTML</h2>
+    <p id="method1"></p>
+    <script>
+        document.getElementById('method1').innerHTML=45-12;
+    </script>
+
+    <h2>Using write</h2>
+    <script>
+        document.write("writing on the document");
+    </script>
+
+    <h2>Using Alert</h2>
+    <script>
+        window.alert("hello learner");
+    </script>
+
+
+    <h2>using console</h2>
+    <script>
+        console.log(hello);
+    </script>
+
+
+
+
+    <input type="text" id="i1">
+    <button onclick="f1()">calc</button>
+
+    <button onclick="f2()">Prompt</button>
+    <script>
+        function f(){
+            var s = Number.parseInt(document.getElementById("i1").value);
+            document.write(s*s);
+        }
+        function f2(){
+            var x=prompt("enter num");
+            document.write(x+x);
+        }
+    </script>
+
+
+
+
+
+
+</body>
+</html>

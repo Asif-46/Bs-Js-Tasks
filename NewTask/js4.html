@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Date and Time</title>
+</head>
+<body>
+    <button onclick="showDate()">show date</button>
+    <p id="date"></p>
+    <button onclick="showTime()">show Time</button>
+    <p id="time"></p>
+
+    <script>
+        function showDate() {
+            const date = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById("date").innerHTML = date.toLocaleDateString('en-GB', options).replace(',', '');
+        }
+
+        function showTime() {
+            const date = new Date();
+            document.getElementById("time").innerHTML = date.toString();
+        }
+    </script>
+</body>
+</html>

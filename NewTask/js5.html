@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .input-field {
+            margin-bottom: 10px;
+        }
+        .input-field label {
+            display: inline-block;
+            width: 100px;
+        }
+        .input-field input, .input-field textarea {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            width: 200px;
+        }
+        .error {
+            color: red;
+            margin-left: 10px;
+        }
+        .error input, .error textarea {
+            border-color: red;
+        }
+    </style>
+</head>
+<body>
+    <form id="myForm">
+        <div class="input-field">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <span class="error" id="nameError">This field is required</span>
+        </div>
+        <div class="input-field">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <span class="error" id="emailError">A valid email address is required</span>
+        </div>
+        <div class="input-field">
+            <label for="website">Website:</label>
+            <input type="text" id="website" name="website">
+            <span class="error" id="websiteError">A valid URL is required</span>
+        </div>
+        <div class="input-field">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            <span class="error" id="messageError">This field is required</span>
+        </div>
+        <input type="button" value="Submit" onclick="validateForm()">
+    </form>
+    <script>
+        function validateForm() {
+            var isValid = true;
+            var fields = document.querySelectorAll('.input-field');
+            fields.forEach(field => field.classList.remove('error'));
+            var name = document.getElementById('name').value;
+            if (name === "") {
+                document.getElementById('nameError').style.display = 'inline';
+                document.getElementById('name').parentNode.classList.add('error');
+                isValid = false;
+            } else {
+                document.getElementById('nameError').style.display = 'none';
+            }
+            var email = document.getElementById('email').value;
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email === "" || !emailPattern.test(email)) {
+                document.getElementById('emailError').style.display = 'inline';
+                document.getElementById('email').parentNode.classList.add('error');
+                isValid = false;
+            } else {
+                document.getElementById('emailError').style.display = 'none';
+            }
+            var website = document.getElementById('website').value;
+            var urlPattern = /^(https?:\/\/)?([\w\d\-]+\.)+\w{2,}(\/[\w\d\-._~:\/?#[\]@!$&'()+,;=])?$/;
+            if (website === "" || !urlPattern.test(website)) {
+                document.getElementById('websiteError').style.display = 'inline';
+                document.getElementById('website').parentNode.classList.add('error');
+                isValid = false;
+            } else {
+                document.getElementById('websiteError').style.display = 'none';
+            } 
+            var message = document.getElementById('message').value;
+            if (message === "") {
+                document.getElementById('messageError').style.display = 'inline';
+                document.getElementById('message').parentNode.classList.add('error');
+                isValid = false;
+            } else {
+                document.getElementById('messageError').style.display = 'none';
+            }
+
+            if (isValid) {
+                alert("Form submitted successfully!");
+            }
+        }
+
+        document.getElementById('nameError').style.display = 'none';
+        document.getElementById('emailError').style.display = 'none';
+        document.getElementById('websiteError').style.display = 'none';
+        document.getElementById('messageError').style.display = 'none';
+    </script>
+</body>
+</html>

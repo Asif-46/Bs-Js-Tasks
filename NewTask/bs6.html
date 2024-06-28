@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .form-group .form-control {
+      margin-bottom: 10px;
+      border-color: #e3342f;
+      background-color: #fcebea;
+    }
+    .form-control::placeholder {
+      color: #999;
+    }
+    .btn-submit {
+      background-color: #e3342f;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 1.25rem;
+      width: 100%;
+    }
+    .form-group.invalid .form-control {
+      border-color: #e3342f;
+      background-color: #fcebea;
+    }
+    .form-group.invalid .form-control::placeholder {
+      color: #e3342f;
+    }
+    .form-group.invalid .error-message {
+      color: #e3342f;
+      font-size: 0.9em;
+    }
+    .form-group.invalid .form-control-feedback {
+      color: #e3342f;
+    }
+    .form-group.invalid .icon {
+      color: #e3342f;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <form id="contactForm" novalidate>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="name" placeholder="Name" required>
+          <div class="input-group-append">
+            <span class="input-group-text icon"><i class="fas fa-exclamation-circle"></i></span>
+          </div>
+        </div>
+        <div class="error-message">Name is required</div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <div class="input-group">
+          <input type="email" class="form-control" id="email" placeholder="Email" required>
+          <div class="input-group-append">
+            <span class="input-group-text icon"><i class="fas fa-exclamation-circle"></i></span>
+          </div>
+        </div>
+        <div class="error-message">Email is required</div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="input-group">
+          <input type="password" class="form-control" id="password" placeholder="Password" required>
+          <div class="input-group-append">
+            <span class="input-group-text icon"><i class="fas fa-exclamation-circle"></i></span>
+          </div>
+        </div>
+        <div class="error-message">Password is required</div>
+      </div>
+      <div class="form-group">
+        <label for="hobbies">Hobbies</label>
+        <select class="form-control" id="hobbies">
+          <option value="">Select your hobbies</option>
+          <option value="reading">Reading</option>
+          <option value="traveling">Traveling</option>
+          <option value="sports">Sports</option>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
+      <button type="submit" class="btn btn-submit">Submit</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      var form = this;
+      var isValid = true;
+      form.querySelectorAll('.form-group').forEach(function (group) {
+        var input = group.querySelector('.form-control, .form-check-input, textarea');
+        if (!input.checkValidity()) {
+          isValid = false;
+          group.classList.add('invalid');
+        } else {
+          group.classList.remove('invalid');
+        }
+      });
+      if (isValid) {
+        // Submit the form or perform desired actions here
+        alert('Form is valid!');
+      }
+    });
+  </script>
+</body>
+</html>

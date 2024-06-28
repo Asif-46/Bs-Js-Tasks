@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <title>Instagram Login</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f0f2f5;
+    }
+
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 350px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="text"]:focus, input[type="password"]:focus {
+      outline: none;
+      border: 1px solid #0084ff;
+    }
+
+    button {
+      background-color: #0084ff;
+      color: white;
+      padding: 12px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .checkbox {
+      margin-top: 10px;
+    }
+
+    .checkbox label {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    .checkbox input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    .forgot-password {
+      text-align: right;
+      margin-top: 10px;
+    }
+
+    .forgot-password a {
+      color: #0084ff;
+      text-decoration: none;
+    }
+
+    .forgot-password a:hover {
+      text-decoration: underline;
+    }
+
+    .signup {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .signup a {
+      color: #0084ff;
+      text-decoration: none;
+    }
+
+    .signup a:hover {
+      text-decoration: underline;
+    }
+
+    .input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.user-icon {
+    position: absolute;
+    left: 10px;
+    color: #060606;
+}
+
+    .password-icon {
+      position: absolute;
+      color: #000000;
+      left: 10px;
+    }
+    .input-container input {
+    padding-left: 35px;  
+    width: 100%;
+    box-sizing: border-box;  
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Instagram</h1>
+    <form>
+      <div class="input-container">
+        <i class="user-icon fas fa-user"></i>
+        <input type="text" placeholder="Username" required>
+      </div>
+      <div class="input-container">
+        <i class="password-icon fas fa-lock"></i>
+        <input type="password" placeholder="Password" required>
+      </div>
+      <button type="submit">Log in</button>
+      <div class="checkbox">
+        <input type="checkbox" id="remember-me">
+        <label for="remember-me">Remember me</label>
+      </div>
+      <div class="forgot-password">
+        <a href="#">Forgot Password?</a>
+      </div>
+    </form>
+    <div class="signup">
+      Don't have an account? <a href="#">Sign up here.</a>
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit-id.js" crossorigin="anonymous"></script>
+</body>
+</html>

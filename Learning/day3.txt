@@ -1,0 +1,20 @@
+
+
+3.Font Property ==> font-family,font-style,font-variant,font-weight,font-size,shorthand
+
+4. Table Property ==> Table - border,width,background color,collapse
+                      tr - height
+                      th,td - Horizontal align,vertical align,zebra striped,hovering,
+
+
+5. css Box Model ==>content-->padding-->border-->margin
+                      border==>width,style,color
+                      padding==>40px=all sides
+
+6.css visibilty
+
+7. Css Display
+
+8.Css Position  ==> static,relative,absolute,fixed,sticky
+
+css Animations : it is a key frames 

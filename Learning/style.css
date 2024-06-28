@@ -1,0 +1,21 @@
+p{
+    color:grey;
+    background-color: azure;
+}
+
+#para2{
+    color:coral;
+}
+
+.para3{
+    color:forestgreen;
+}
+
+h2,h3{
+    color:cornflowerblue;
+}
+
+*{
+    font-size: larger;
+    font-weight: lighter;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border-top-style:dashed;
+            border:inset;
+            border-width:8px;
+            border-color: brown;
+            padding:60px 40px;
+            padding:60px,20px,40px;
+            padding:60px,20px,30px,10px;
+            padding-bottom: 40px;
+            margin: 40px;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- css Box Model-->
+    <div style="border-top-style:dashed;border-left-style: dotted;bottom-right-radius:3px;">
+        1st division element
+    </div>
+
+    <!-- css visibility-->
+    <p>Regular or Normal visibility</p>
+    <p style="visibility: hidden;">Value of visibility is hidden</p>
+
+    <!--Css Display-->
+    <p style="border:solid 3px green;display:inline;">I am in first Line</p>
+    <p style="border:solid purple 5px;display:inline">I am in second line</p>
+
+    <div>
+        <p style="border:solid 3px green;display:inline;">I am in first Line</p>
+        <p style="border:solid purple 5px;display:inline">I am in second line</p>
+    </div>
+
+    <!-- Css Position-->
+    <p style="position:static;left:30px;">HTML elements are positioned static by default it wont be effected by top ,bottom,left,right prop </p>
+    <p style="background-color: aqua;border:5px ridge greenyellow;display:inline;position:relative;left:30px;">Relative positioning</p>
+    <p style="background-color: orange;border:5px ridge yellow;display:inline;position:relative;left:30px;z-index: 5;">1st absolute element</p>
+    <p style="background-color: orange;border:5px ridge yellow;display:inline;position:absolute;left:30px;z-index:2">2nd absolute element</p>
+
+    <h1>asif</h1>
+    <h1>asif</h1>
+    <h1>asif</h1>
+    <div style="border:3px solid skyblue;position:sticky;top:50px;">Sticky is allowed both relative+fixed</div>
+    <h1>asif</h1>
+    <h1>asif</h1>
+    <h1>asif</h1>
+    <div style="display:inline;border:5px dashed red;position:fixed;bottom:50px;">Fixed Positioning</div>
+
+
+
+    <!-- Animation-->
+    <p> Animation</p>
+
+
+
+   
+    
+</body>
+</html>

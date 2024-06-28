@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Train Animation</title>
+  <style>
+    #trainImage {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      width: 200px;
+      height: auto;
+    }
+
+    #buttons {
+      position: absolute;
+      top: 170px; 
+      left:46%;
+      text-align: center;
+    }
+
+    #he2{
+      padding:110px;
+      text-align:center;
+      color:darkblue;
+    }
+
+  </style>
+</head>
+<body>
+  <img id="trainImage" src="https://www.javatpoint.com/oprweb/train1.png" alt="Train Image"> 
+
+  <h2 id="he2">Click the following buttons to handle animation</h2>
+
+
+  <div id="buttons">
+    <button id="startButton">Start</button>
+    <button id="stopButton">Stop</button>
+  </div>
+
+  <script>
+    let trainImage = document.getElementById("trainImage");
+    let startButton = document.getElementById("startButton");
+    let stopButton = document.getElementById("stopButton");
+    let animationInterval = null;
+
+    startButton.addEventListener("click", startAnimation);
+    stopButton.addEventListener("click", stopAnimation);
+
+    function startAnimation() {
+      if (animationInterval) {
+        clearInterval(animationInterval);
+      }
+      animationInterval = setInterval(moveTrain, 10);
+    }
+
+    function stopAnimation() {
+      clearInterval(animationInterval);
+      animationInterval = null;
+    }
+
+    function moveTrain() {
+      let currentPosition = trainImage.offsetLeft;
+      trainImage.style.left = currentPosition + 1 + "px";
+
+      if (currentPosition > window.innerWidth) {
+        trainImage.style.left = 0 + "px";
+      }
+    }
+  </script>
+</body>
+</html>

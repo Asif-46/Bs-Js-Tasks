@@ -1,0 +1,3 @@
+> In day8 discussed about string ,browser object model
+
+// Document object model(DOM)

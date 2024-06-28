@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function one(){
+            document.write("func without parameters");
+        }
+        function two(number){
+            document.write("square="+number*number);
+
+        }
+        function three(number){
+            return "func with return value";
+        }
+        document.write(three());
+        function f1(){
+            console.log("hello world");
+        }
+        var d4 =()=>{
+            alert("welcome");
+        }
+        var d5=function(x){
+            alert(x);
+        }
+        var d6=(y)=>alert(y);
+
+        // classes
+        class A{
+            x=10;
+            y =4;
+            abc(){
+                console.log("welcome to js classes");
+            }
+
+        }
+        const obj =new A();
+        console.log(obj.x);
+        console.log(obj.y);
+        obj.abc();
+
+        class c{
+            constructor(one,two){
+                this.one=one;
+                this.two=two;
+            }
+            run(){
+                console.log(this.one);
+                console.log(this.two);
+            }
+        }
+        const ob =new c(10,20);
+        ob.run();
+    </script>
+    <button onclick="one()">one</button>
+    <button onclick="two(5)">two</button>
+    <button onclick="f1()">Button 1</button>
+    <button onclick="f2()">Button 1</button>
+    <button onclick="d4()">Arrow</button>
+    <button onclick="d5('valid')">As Variable with parameter</button>
+    <button onclick="d6('valid arrow')">Arrow with parameter</button>
+</body>
+</html>

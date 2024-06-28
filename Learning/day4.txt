@@ -1,0 +1,22 @@
+2.Breakpoint
+
+extrasmall==>xs==>lessthan/equalto 576
+small==>sm==>greaterthan/equalto 576
+medium==>md==>greaterthan/equalto 768
+large==>lg==>greaterthan/equalto 992
+extralarge==>xl==>greaterthan/equalto 1200
+extra extra large ==>xxl==>greater than/ equal to 1400
+
+3.container  ==>container == lefft and right margins are available
+            container-fluid ==occupies 100% width
+            container-lg(lg,xl,xxl) ==>it acts as container
+                        (xs,sm,md)  ==> it acts as container flluid
+
+
+4.Grid ==> row & col
+            In every by default we have 12 columns
+            Equal width
+
+5.equal width, variable width, specific col width, mix & match,nested
+
+# TYPOGRAPHY

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    /*function f1(){
+        console.log("one");
+    }
+    function f2(){
+        setTimeout(() =>{
+            console.log("two");
+        },1000)
+    }
+    function f3(){
+        console.log("three");
+    }
+    f1()
+    f2()
+    f3()
+
+    function one(){
+        setTimeout(() => {
+            console.log('setTimeout');
+
+        },3000);
+    }
+    one()*/
+
+    /*function F1(){
+        console.log("one");
+    }
+    function F2(cb){
+        setTimeout(() =>{
+            console.log("two")
+            cb();
+        },3000);
+    }
+    function F3(){
+        console.log("three");
+    }
+    F1()
+    F2(F3)*/
+
+    //3
+    /*function f(){
+        setTimeout(()=>{
+            console.log("one")
+            setTimeout(()=>{
+                console.log("two")
+                    setTimeout(()=>{
+                        console.log("three")
+                    },2000);
+                },4000);
+        },6000);
+
+    }
+    f()*/
+
+    //4
+    function req(args,cb){
+        if(!args){
+            return cb(new Error("something went wrong"))
+        }
+        else{
+            return setTimeout(() =>{
+                cb(null,{body:args+" "+Math.floor(Math.random()*10)})
+            },500);
+        }
+    }
+
+    function cb(){
+        req("First",function first(error,response){
+            if(error){
+                console.log(error)
+                return
+            }
+            console.log(response.body)
+            req(null,function second(error,response){
+            if (error){
+                console.log(error)
+                return
+            }
+            console.log(response.body)
+
+            })
+        })
+    }
+
+    
+    </script>
+</body>
+</html

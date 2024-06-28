@@ -1,0 +1,44 @@
+>> javascript is a imperative paradiagm(c++,csharp,javascript)-- need to tell what has to be done               
+                declarative paradigm(html,css)
+
+>> in procedural language(derived from imperative programming) execution of steps takes place step by step.
+
+>> html- core of web page
+    css - paint the structure 
+    why java sccript ? - static to dynamic change 
+                        - first js is known as livescript by netscape
+                        -- versions of js are ES(ecma script)->ES5,ES6
+
+
+>> java script commands
+    single line -- //
+    multi line -- /*------*/
+
+
+>> JS is dynamically typed language
+
+>> every variable have to be an identifier. Have to start with "a-z"  or A-Z or _ or $
+
+>> Data types 
+
+primitive :     String==> includes characters => '' or "" or ``(template literals) or 
+                Numbers ==> (includes both whole nos & decimals)
+                Boolean ==> true or false
+                null ==> Empty[valid value]
+                undefined => not defined yet
+
+
+>> operators ==> Arithmetic,Comparison,Logical,Bitwise,Assignment,Conditional
+
+>> conditional statments ==> if,if else,else-if,nested if,switch
+
+>> loopin statements ==> for,while,do while,for-in , for-of
+
+>> loop control statements ==> break, continue
+
+>> functions ==> arguments,withouot arguments,with return value,as a variable ,arrow function
+
+>> classes ==> declareing,accessing,constructor
+
+
+

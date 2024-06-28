@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // conditional 
+    let a =20;
+    let b =30;
+    document.write((a>b)?a:b);
+
+    // Conditional statements
+    let m =2;
+    let n =30;
+    function f1(){
+        if(x<y){
+        document.getElementById('i1').innerHTML="x is smaller";
+
+    }
+    if(x>y){
+        console.log("x is greater");
+    }
+    else if(x==y){
+        document.write("x is equal to y");
+    }
+    else{
+        console.log("y is greater");
+    }
+
+    }
+    var grade='A';
+    switch(grade){
+        case 'A' :console.log("topper");
+            break;
+        case 'B' : console.log("medium");
+        case 'C' : console.log("below Average");
+    }
+
+        // loopimg
+        let count;
+        for(count=0;count<10;count++){
+            console.log(count);
+        }
+
+        let i=0;
+        while(i<10){
+            console.log(i);
+            i++;
+        }
+
+        // function 
+        function one(){
+            document.write("func without parameters");
+        }
+        function two(number){
+            document.write("square="+number*number);
+
+        }
+        function three(number){
+            return "func with return value";
+        }
+        document.write();
+    
+    </script>
+    <p id="i1">paragraph</p>
+    <button onclick="f1()">change</button>
+</body>
+</html>

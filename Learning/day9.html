@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+                <!-- DOM -->
+    <script>
+        function print(){
+            var name = document.form1.name.value;
+            alert(name)
+        }
+        function Total(){
+            var total=document.getElementByName("gender");
+            alert(total.length)
+        }
+        var x=document.getELementByClassName("Class");
+        document.write(x);
+
+        function show(){
+            var data=`Name: <input type="text" name="name"` <br/>
+            <input type="button" value="post">
+            document.getELementById('my').innerText=data;
+        }
+    </script>
+</body>
+<form action="" name="form1">
+    enter name : <input type="text" name="name" id="">
+    <input type="button" onclick="print()" value="print value">
+</form>
+<form action="">
+    male: <input type="radio" name="gender" value="male">
+    female: <input type="radio" name="gender" value="female">
+
+<input type="button" onclick="Total()" value="Total">
+</form>
+<p>Example1</p>
+<p>Example2</p>
+<p>Example3</p>
+
+<form action="" name="myform">
+    <input type="button" value="click" onclick="show()">
+    <div id='my'></div>
+    
+</form>
+</html>

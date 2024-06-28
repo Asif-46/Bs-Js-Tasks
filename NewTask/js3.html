@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <form>
+        1st Number : <input type="text" id="firstNumber" /><br>
+        2nd Number: <input type="text" id="secondNumber" /><br>
+        <input type="button" onClick="multiplyBy()" value="Multiply" />
+        <input type="button" onClick="divideBy()" value="Divide" />
+    </form>
+    <p>The Result is :</p>
+    <p id="result"></p>
+
+    <script>
+        function multiplyBy() {
+            var num1 = parseFloat(document.getElementById("firstNumber").value);
+            var num2 = parseFloat(document.getElementById("secondNumber").value);
+            var result = num1 * num2;
+            document.getElementById("result").innerHTML = result;
+        }
+
+        function divideBy() { 
+            var num1 = parseFloat(document.getElementById("firstNumber").value);
+            var num2 = parseFloat(document.getElementById("secondNumber").value);
+            if (num2 !== 0) {
+                var result = num1 / num2;
+                document.getElementById("result").innerHTML = result;
+            } else {
+                document.getElementById("result").innerHTML = "Cannot divide by zero";
+            }
+        }
+    </script>
+</body>
+</html>

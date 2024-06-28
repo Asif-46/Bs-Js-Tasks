@@ -1,0 +1,13 @@
+1. Table  ==> table,table-bordered,table-borderless,border-color(primary,secondary,.....)
+
+2. Form     ==> form,form-label,form-control,form-text,form-select,form-check,disabled==disabled,field check
+
+3. Button   ==> btn,btn-color(),btn-size(),btn-outline()
+
+4. margin ==> mt(margin top) ,mb(margin bottom),ms(left) ,me(right),mx(left&right),my(top&bottom),m-{0,1,2,3,4,5}
+
+   padding      ==>pt(top),pb(bottom),ps(left),pe(right),px(left&right),py(top&bottom),p-{0,1,2,3,4,5}
+
+5. cards       ==>card,card-body,card-title,card-subtitle,card-text,card-link,card-img,card-header,card-footer
+
+6. navigation  ==>nav tag , navbar,navbar-expand,nav-link,nav-item, nav-brand

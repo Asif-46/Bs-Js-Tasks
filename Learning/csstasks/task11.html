@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoverable Sidenav Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .container {
+            display: flex;
+            border: 1px solid #000; /* Added border to surround entire content */
+            box-sizing: border-box;
+        }
+
+        .sidenav {
+            width: 60px; /* Adjusted to match the image */
+            background-color: #f1f1f1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px; /* Added padding for alignment */
+            box-sizing: border-box;
+        }
+
+        .sidenav a {
+            width: 40px; /* Adjusted to match the image */
+            height: 40px; /* Adjusted to match the image */
+            margin: 5px 0;
+            display: block;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .sidenav a.green {
+            background-color: green;
+        }
+
+        .sidenav a.blue {
+            background-color: blue;
+        }
+
+        .sidenav a.red {
+            background-color: red;
+        }
+
+        .sidenav a.black {
+            background-color: black;
+        }
+
+        .sidenav a:hover {
+            width: 60px;
+            height: 60px;
+        }
+
+        .main {
+            flex-grow: 1;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 24px; /* Adjusted font size to match the image */
+        }
+
+        p {
+            font-size: 16px; /* Adjusted font size to match the image */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidenav">
+            <a href="#" class="green"></a>
+            <a href="#" class="blue"></a>
+            <a href="#" class="red"></a>
+            <a href="#" class="black"></a>
+        </div>
+        <div class="main">
+            <h2>Hoverable Sidenav Buttons</h2>
+            <p>Hover over the buttons in the left side navigation to open them.</p>
+        </div>
+    </div>
+</body>
+</html>
